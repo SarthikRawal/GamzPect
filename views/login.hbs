@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login & Registration Form</title>
+  <!---Custom CSS File--->
+  <link rel="stylesheet" href="/login.css">
+</head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="check">
+    <div class="login form">
+      <header>Login</header>
+      <form action="#">
+        <input type="text" placeholder="Enter your email">
+        <input type="password" placeholder="Enter your password">
+        <a href="#">Forgot password?</a>
+        <input type="button" class="button" value="Login">
+      </form>
+      <div class="signup">
+        <span class="signup">Don't have an account?
+         <label for="check">Signup</label>
+        </span>
+      </div>
+    </div>
+    <div class="registration form">
+      <header>Signup</header>
+      <form action="/signup" method="post">
+        <input id="username" name="username" type="text" placeholder="Enter your username">
+        <input id="email" name="email" type="email" placeholder="Enter your email">
+        <input id="pwd" name="pwd" type="password"  placeholder="Create a password">
+        <input id="cpwd" name="cpwd" type="password" placeholder="Confirm your password">
+        <input type="submit" class="button" value="Signup" onclick="validate()">
+      </form>
+      <div class="signup">
+        <span class="signup">Already have an account?
+         <label for="check">Login</label>
+        </span>
+      </div>
+    </div>
+  </div>
+  <script>
+    function validate() {
+      var x= document.getElementById("pwd");
+      var y= document.getElementById("cpwd");
+      if(x.value==y.value) return;
+      else alert("password not same");
+      
+    }
+  </script>
+</body>
+</html>
